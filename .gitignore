@@ -1,0 +1,17 @@
+## Ignorar carpetas de compilación y salida ##
+[Bb]in/
+[Oo]bj/
+
+## Ignorar archivos específicos de usuario y configuración local ##
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## Ignorar carpeta oculta de Visual Studio ##
+.vs/
+
+## Ignorar archivos temporales y logs ##
+*.log
+*.tmp
+TestResults/
