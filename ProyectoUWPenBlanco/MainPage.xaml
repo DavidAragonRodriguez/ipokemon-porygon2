@@ -1,0 +1,55 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProyectoUWPenBlanco"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:ControlDeUsuarioPokemon"
+    x:Class="ProyectoUWPenBlanco.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.RowSpan="2" Margin="0,5,0,0">
+
+            <TextBlock x:Name="tbVida" TextWrapping="Wrap" Text="Atributo Vida" FontWeight="Bold" Margin="5,0,0,0"/>
+            <Slider x:Name="slVida" Margin="10,0,10,0" ValueChanged="cambiarVida"/>
+            <TextBlock x:Name="tbEnergia" TextWrapping="Wrap" Text="Atributo Energía" FontWeight="Bold" Margin="5,0,0,0"/>
+            <Slider x:Name="slEnergia" Margin="10,0,10,0" ValueChanged="cambiarEnergía"/>
+            <TextBlock x:Name="tbHabilidades" TextWrapping="Wrap" Text="Habilidades" FontWeight="Bold" Margin="5,0,0,0"/>
+            <Button x:Name="btAtaqueFuerte" Content="Ataque Fuerte" HorizontalAlignment="Stretch" Margin="5,5,5,5" Height="30" Click="EjecutarAtaqueFuerte"/>
+            <Button x:Name="btAtaqueFlojo" Content="Ataque Flojo" HorizontalAlignment="Stretch" Margin="5,5,5,5" Height="30" Click="EjecutarAtaqueFlojo"/>
+            <Button x:Name="btDefensa" Content="Defensa" HorizontalAlignment="Stretch" Margin="5,5,5,5" Height="30" Click="EjecutarDefensa"/>
+            <Button x:Name="btDescansar" Content="Descansar" HorizontalAlignment="Stretch" Margin="5,5,5,5" Height="30" Click="EjecutarDescansar"/>
+            <TextBlock x:Name="tbEstados" TextWrapping="Wrap" Text="Estados" FontWeight="Bold" Margin="5,0,0,0"/>
+            <CheckBox x:Name="cbAnimacionIddle" Content="Animacción Iddle" Margin="5,0,0,0" HorizontalAlignment="Stretch" Checked="activarIddle" Unchecked="desactivarIddle"/>
+            <CheckBox x:Name="cbAnimacionCansado" Content="Cansado" Margin="5,0,0,0" Unchecked="desactivarCansado" Checked="activarCansado"/>
+            <CheckBox x:Name="cbAnimacionHerido" Content="Herido" Margin="5,0,0,0" Checked="activarHerido" Unchecked="desactivarHerido"/>
+            <CheckBox x:Name="cbAnimacionEscudo" Content="Escudo" Margin="5,0,0,0" Unchecked="desactivarEscudo" Checked="activarEscudo"/>
+            <TextBlock x:Name="tbInterfazGrafica" TextWrapping="Wrap" Text="Interfaz Gráfica" FontWeight="Bold" Margin="5,0,0,0"/>
+            <CheckBox x:Name="cbFondo" Content="Fondo" Margin="5,0,0,0" Checked="verFondo" Unchecked="noVerFondo"/>
+            <CheckBox x:Name="cbFilaVida" Content="Fila Vida" Margin="5,0,0,0" Unchecked="noVerFilaVida" Checked="verFilaVida"/>
+            <CheckBox x:Name="cbFilaEnergia" Content="Fila Energía" Margin="5,0,0,0" Checked="verFilaEnergia" Unchecked="noVerFilaEnergía"/>
+            <CheckBox x:Name="cbPocionVida" Content="Poción Vida" Margin="5,0,0,0" Checked="verPocimaVida" Unchecked="noVerPocimaVida"/>
+            <CheckBox x:Name="cbPocionEnergia" Content="Poción Energía" Margin="5,0,0,0" Unchecked="noVerPocimaEnergia" Checked="verPocimaEnergia"/>
+            <CheckBox x:Name="cbNombre" Content="Nombre" Margin="5,0,0,0" Checked="verNombrePokemon" Unchecked="noVerNombrePokemon"/>
+
+            <TextBlock x:Name="tbDerrota" TextWrapping="Wrap" Text="Derrota" FontWeight="Bold" Margin="5,0,0,0"/>
+            <Button x:Name="btDerrotar" Content="Derrotar Pokémon" HorizontalAlignment="Stretch" Margin="5,5,5,5" Height="30" Click="EjecutarDerrota"/>
+        </StackPanel>
+        <StackPanel Margin="0,675,0,0" Grid.RowSpan="1">
+            <TextBlock TextWrapping="Wrap" Text="" FontWeight="Bold"/>
+        </StackPanel>
+        <TextBlock Grid.Column="1" Visibility="Collapsed" HorizontalAlignment="Left" Height="114" Margin="345,0,0,0" TextWrapping="Wrap" Text="Este es el ultra cutre visor de Controles de Usuario Pokemon 2025 de IPO 2. Debéis incluir en esta celda del Grid (extendiéndose en todo el ancho y largo de la celda) vuestro control de usuario pokemon, que importe la interfaz iPokemon.cs. Para probar el comportamiento, los eventos asociados a los Widgets de la izquierda deben hacer llamadas a las funciones de la interfaz iPokemon de vuestro pokemon." VerticalAlignment="Center" Width="490" d:IsHidden="True"/>
+
+        <Custom:Porygon2DAR x:Name="ucPorygon2DAR" Width="Auto" Height="Auto" Grid.Column="1" Grid.RowSpan="1"/>
+
+    </Grid>
+</Page>
